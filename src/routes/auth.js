@@ -16,7 +16,7 @@ router.post('/', (req, res) => {
 
     sql.connect(config).then(() => {
         //return sql.query`select * from Authors where id = ${value}`
-        return sql.query`select top 300 * from [tblPosts]`
+        return sql.query`select top 300 * from Users`
     }).then(result => {
         res.status(200).json({ data: result });
     }).catch(err => {
